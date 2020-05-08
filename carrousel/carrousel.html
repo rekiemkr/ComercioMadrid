@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+    }
+    .carrousel{
+        width: 100%;
+        overflow: scroll;
+        padding: 30px;
+        position: relative;
+    }
+    .carrousel__container{
+        white-space: nowrap;
+        margin: 70px 0px;
+        padding-bottom: 10px;
+    }
+    
+    .carrousel-item{
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        background-color: seagreen;
+        overflow: hidden;
+        margin-right: 10px;
+        display: inline-block;
+        cursor: pointer;
+        transition: 450ms all;
+        transform-origin: center left;
+        position: relative;
+    }
+    .carrousel-item:hover ~ .carrousel-item{
+        transform: translate3d(100px, 0, 0);
+        background-color: red;
+    }
+    .carrousel__container:hover .carrousel-item{
+        opacity: .3;
+    }
+    .carrousel__container:hover .carrousel-item:hover{
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    .carrousel-item__image{
+        width: 200px;
+        height: 250px;
+        object-fit: cover;
+    }
+    .carrousel-item__details{
+        /* background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%); */
+        font-size: 10px;
+        opacity: 1;
+        transition: 450ms opacity;
+        padding: 10px;
+        position: absolute;
+        top: 150px;
+        left: 0;
+        bottom: 0;
+    }
+    .carrousel-item__details--img{
+        width: 25px;
+        height: 25px;
+    }
+    .carrousel-item__details--title{
+        color: #FFF;
+        font-family: 'Muli', sans-serif;
+        margin-bottom: 5px;
+    }
+    .carrousel-item__details--subtitle{
+        color: #FFF;
+        margin: 0;
+        font-family: 'Muli', sans-serif;
+    }
+</style>
+<body>
+    <section class="carrousel">
+        <div class="carrousel__container">
+            <div class="carrousel-item">
+                <img class="carrousel-item__image" src="https://images.pexels.com/photos/2253415/pexels-photo-2253415.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="" srcset="">
+                <div class="carrousel-item__details">
+                    <div>
+                        <img class="carrousel-item__details--img" src="https://img.icons8.com/plasticine/100/000000/play.png"/>
+                        <img class="carrousel-item__details--img" src="" alt="" srcset="">
+                    </div>
+                    <p class="carrousel-item__details--title">Titulo descriptivo</p>
+                    <p class="carrousel-item__details--subtitle">2016 6+ 114 minutos</p>
+                </div>
+            </div>
+            <div class="carrousel-item">
+                
+            </div>
+        </div>
+    </section>
+</body>
+</html>
